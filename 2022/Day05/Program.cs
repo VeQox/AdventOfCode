@@ -18,14 +18,16 @@
       int moveAmount = int.Parse(splittedMove[1]);
       Stack<char> originialStack = cargos[int.Parse(splittedMove[3]) - 1];
       Stack<char> moveToStack = cargos[int.Parse(splittedMove[5]) - 1];
-
+      
       List<char> removedCargos = new List<char>(moveAmount);
-      for(int i = 0; i < moveAmount; i++)
+      for(int i = 0; i < moveAmount; i++){
         removedCargos.Add(originialStack.Pop());
-        
+      }
+      
       removedCargos.Reverse();
-      foreach(char removedCargo in removedCargos)
+      foreach(char removedCargo in removedCargos){
         moveToStack.Push(removedCargo);
+      }
     }
     
     return string.Join(string.Empty, cargos.Select(stack => stack.Peek()));
