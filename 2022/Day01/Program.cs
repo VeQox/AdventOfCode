@@ -1,8 +1,8 @@
 ﻿class Program{
   const string INPUT_PATH = "input.txt";
   static void Main() {
-    Console.WriteLine($"PartOne: {PartOne(getInput())}");
-    Console.WriteLine($"PartTwo: {PartTwo(getInput())}");
+    Console.WriteLine($"PartOne: {PartOne(GetInput())}");
+    Console.WriteLine($"PartTwo: {PartTwo(GetInput())}");
   }
 
   static int PartTwo(string[] input){
@@ -40,6 +40,6 @@
     return maxCalories;
   }
 
-  static string[] getInput()
+  static string[] GetInput()
     => File.ReadAllLines(INPUT_PATH);
 }
