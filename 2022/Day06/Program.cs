@@ -22,7 +22,7 @@
   static int PartOne(string[] input)
   {
     string line = input[0];
-    for(int i = 0; i < line.Length - 14; i++){
+    for(int i = 0; i < line.Length - 4; i++){
         char[] currentRange = line[i..(i+4)].ToCharArray();
         if(AreAllDifferent(currentRange)){
             return i + 4;
