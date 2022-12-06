@@ -78,6 +78,7 @@ namespace AdventOfCode.Y2022
         Move.Rock => player2 == Move.Paper ? -1 : 1,
         Move.Paper => player2 == Move.Scissors ? -1 : 1,
         Move.Scissors => player2 == Move.Rock ? -1 : 1,
+        _ => throw new InvalidDataException(nameof(player1))
       };
     }
 
@@ -88,6 +89,7 @@ namespace AdventOfCode.Y2022
         Move.Rock => Move.Scissors,
         Move.Paper => Move.Rock,
         Move.Scissors => Move.Paper,
+        _ => throw new InvalidDataException(nameof(opponent))
       };
     }
 
@@ -98,6 +100,7 @@ namespace AdventOfCode.Y2022
         Move.Rock => Move.Paper,
         Move.Paper => Move.Scissors,
         Move.Scissors => Move.Rock,
+        _ => throw new InvalidDataException(nameof(opponent))
       };
     }
 
