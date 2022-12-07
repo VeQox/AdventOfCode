@@ -6,7 +6,7 @@ namespace AdventOfCode
   {
     public static void Main()
     {
-      Runner.Run<int>(new Day06());
+      Runner.Run(new Day07());
     }
   }
 }
