@@ -73,7 +73,7 @@ namespace AdventOfCode.Y2022
     private int GetScoreOfDirection(char[] direction, char currentTree)
     {
       char[] filteredTrees = direction.TakeWhile(tree => currentTree > tree).ToArray();
-      return filteredTrees.Length + filteredTrees.Length == direction.Length ? 0 : 1;
+      return filteredTrees.Length + (filteredTrees.Length == direction.Length ? 0 : 1);
     }
 
 
